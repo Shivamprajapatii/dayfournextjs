@@ -1,17 +1,15 @@
 "use client"
 import { useSession, SessionProvider, signOut, signIn } from "next-auth/react";
 
-export default function Home() {
-  
+export default function App() {
   return (
     <SessionProvider> 
-      <RealHome />
+      <Home />
     </SessionProvider> 
   );
 }
 
-
-const RealHome = () => {
+const Home = () => {
   const session = useSession();
   return(
     <div>
